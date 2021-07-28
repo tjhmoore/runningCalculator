@@ -11,6 +11,7 @@
 --primary-color: #247ba0ff;
 --secondary-color: #090F1F;
 --tertiary-color: #CC5803;
+--quaternary-color: #CCCCCC;
 }
 
 body p {
@@ -125,6 +126,11 @@ header h1 i {
   }
 }
 
+.results-content {
+  background-color: var(--quaternary-color);
+  padding: 5px;
+  margin: 5px;
+}
 
 
 
