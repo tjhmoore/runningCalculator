@@ -11,6 +11,7 @@
 --primary-color: #247ba0ff;
 --secondary-color: #090F1F;
 --tertiary-color: #CC5803;
+--quaternary-color: #CCCCCC;
 }
 
 body p {
@@ -127,6 +128,7 @@ header h1 i {
 
 .results-content{
   width: 100%;
+  background-color: var(quaternary-color);
 }
 
 
