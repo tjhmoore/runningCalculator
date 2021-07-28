@@ -77,7 +77,7 @@ header h1 i {
 
 .cover-image {
   position: relative;
-  background: url('/img/running.jpg') no-repeat center top/cover;
+  background: url('../img/running.jpg') no-repeat center top/cover;
   height: 40vh;
   display:flex;
   justify-content: center;
@@ -85,11 +85,11 @@ header h1 i {
 }
 
 .cover-image.swimming {
-  background: url('/img/swimming.jpg') no-repeat center top/cover;
+  background: url('../img/swimming.jpg') no-repeat center top/cover;
 }
 
 .cover-image.cycling {
-  background: url('/img/cycling.jpg') no-repeat center top/cover;
+  background: url('../img/cycling.jpg') no-repeat center top/cover;
 }
 
 .cover-image::before {
