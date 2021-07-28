@@ -6,7 +6,7 @@ function milesToKm(miles){
     return outputInMiles.toFixed(2);
 }
 
-// KM to Miles caluclation
+// KM to Miles calculation
 let km
 function kmToMiles(km){
     outputInKm = km*0.62137
