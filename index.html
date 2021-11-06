@@ -35,19 +35,19 @@
     <input type="text" maxlength="4" size="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
       class="distance">
     <select id="milesOrKM" name="milesOrKM">
-      <option value="miles">Miles</option>
-      <option value="kilometers">Kilometers</option>
+      <option value="Miles">Miles</option>
+      <option value="Kilometers">Kilometers</option>
     </select></br>
     <label for="hours">Hours:</label>
-    <input class="hours" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <input id="hours" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="minutes">Minutes:</label>
-    <input class="minutes" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <input id="minutes" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="seconds">Seconds:</label>
-    <input class="seconds" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    <input id="seconds" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
     </select>
   </form>
-  <h3>Pace</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
+  <h3>Average Speed</h3>
+  <p id="average-speed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
     maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
   <h3>Estimated Event Times</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
@@ -58,7 +58,8 @@
   <h3>Training Pace Zones</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
     maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
-  <script src="js/scripts.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/dom.js"></script>
 </body>
 
 </html>
