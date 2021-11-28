@@ -25,8 +25,6 @@ const worldRecords = {
   }
 }
 
-console.log(`The 5km world records are held by ${worldRecords.fivekm.male.name} and ${worldRecords.fivekm.female.name} with running times of ${worldRecords.fivekm.male.time.minutes} minutes and ${worldRecords.fivekm.male.time.seconds} seconds and ${worldRecords.fivekm.female.time.minutes} minutes and ${worldRecords.fivekm.female.time.seconds} seconds respectively`)
-
 const calculateSpeedWithoutDecimalRounding = function () {
   const time = (runningData.hours) + (runningData.minutes / 60) + (runningData.seconds / 3600)
   const speed = runningData.distance / time
@@ -65,9 +63,14 @@ let updateAverageSpeed = function () {
   let milesOrKmUnit = runningData.miles ? 'mph' : 'kmh'
   let mileOrKmSingular = runningData.miles ? 'mile' : 'kilometer'
   nanConvert()
+  //average speed
   document.getElementById("average-speed").innerHTML = `Your distance is ${runningData.distance} ${milesOrKm}. </br> Your running time is ${runningData.hours} hours, ${runningData.minutes} minutes and ${runningData.seconds} seconds. </br>
   Your average speed was ${calculateSpeed()} ${milesOrKmUnit}</br>
   Your average pace was ${calculatePace()} ${mileOrKmSingular}</br>`
+  //world records
+  document.getElementById("world-records").innerHTML = `The 5km world records are held by <b>${worldRecords.fivekm.male.name}</b> and <b>${worldRecords.fivekm.female.name}</b> with running times of <b>${worldRecords.fivekm.male.time.minutes} minutes and ${worldRecords.fivekm.male.time.seconds} seconds</b> and <b>${worldRecords.fivekm.female.time.minutes} minutes and ${worldRecords.fivekm.female.time.seconds} seconds</b> respectively
+  Your time is 
+  `
 }
 
 let distanceUnitChange = function () {
@@ -81,33 +84,24 @@ let distanceUnitChange = function () {
   updateAverageSpeed()
 }
 
-let distanceChange = function () {
-  let input = document.getElementById("distance").value
-  runningData.distance = input
+let domUpdate = function () {
+  const distance = document.getElementById("distance").value
+  const hours = document.getElementById("hours").value
+  const minutes = document.getElementById("minutes").value
+  const seconds = document.getElementById("seconds").value
+  runningData.distance = distance
+  runningData.hours = hours
+  runningData.minutes = minutes
+  runningData.seconds = seconds
   updateAverageSpeed()
 }
-
-let hoursChange = function () {
-  let input = document.getElementById("hours").value
-  runningData.hours = input
-  updateAverageSpeed()
-}
-let minutesChange = function () {
-  let input = document.getElementById("minutes").value
-  runningData.minutes = input
-  updateAverageSpeed()
-}
-let secondsChange = function () {
-  let input = document.getElementById("seconds").value
-  runningData.seconds = input
-  updateAverageSpeed()
-}
-
-updateAverageSpeed()
 
 //listeners
 document.getElementById("milesOrKM").addEventListener("change", distanceUnitChange)
-document.getElementById("distance").addEventListener("input", distanceChange)
-document.getElementById("hours").addEventListener("input", hoursChange)
-document.getElementById("minutes").addEventListener("input", minutesChange)
-document.getElementById("seconds").addEventListener("input", secondsChange)
+document.getElementById("distance").addEventListener("input", domUpdate)
+document.getElementById("hours").addEventListener("input", domUpdate)
+document.getElementById("minutes").addEventListener("input", domUpdate)
+document.getElementById("seconds").addEventListener("input", domUpdate)
+
+//for first load of page
+updateAverageSpeed()
