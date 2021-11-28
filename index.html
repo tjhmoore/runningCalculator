@@ -11,9 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
-
 </head>
-
 
 <body>
   <header>
@@ -32,22 +30,26 @@
   <h3>Enter your Running Times</h3>
   <form>
     <label for="distance">Distance</label>
-    <input type="text" maxlength="4" size="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
-      class="distance">
+    <input id="distance" maxlength="4" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
     <select id="milesOrKM" name="milesOrKM">
       <option value="Miles">Miles</option>
       <option value="Kilometers">Kilometers</option>
     </select></br>
     <label for="hours">Hours:</label>
-    <input id="hours" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <input id="hours" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="minutes">Minutes:</label>
-    <input id="minutes" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <input id="minutes" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="seconds">Seconds:</label>
-    <input id="seconds" maxlength="2" size="4" placeholder="00" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    <input id="seconds" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
     </select>
   </form>
   <h3>Average Speed</h3>
-  <p id="average-speed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
+  <p id="average-speed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate
+    facere obcaecati,
     maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
   <h3>Estimated Event Times</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
