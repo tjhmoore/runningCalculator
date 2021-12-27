@@ -27,35 +27,53 @@
   <section class="cover-image">
     <h2>Running Calculator</h2>
   </section>
-  <h3>Enter your Running Times</h3>
+  <h3>Speed</h3>
   <form>
     <label for="distance">Distance</label>
-    <input id="distance" maxlength="4" size="4" placeholder="00"
+    <input id="speedcalc-distance" maxlength="4" size="4" placeholder="00"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
     <select id="milesOrKM" name="milesOrKM">
       <option value="Miles">Miles</option>
       <option value="Kilometers">Kilometers</option>
     </select></br>
     <label for="hours">Hours:</label>
-    <input id="hours" maxlength="2" size="4" placeholder="00"
+    <input id="speedcalc-hours" maxlength="2" size="4" placeholder="00"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="minutes">Minutes:</label>
-    <input id="minutes" maxlength="2" size="4" placeholder="00"
+    <input id="speedcalc-minutes" maxlength="2" size="4" placeholder="00"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
     <label for="seconds">Seconds:</label>
-    <input id="seconds" maxlength="2" size="4" placeholder="00"
+    <input id="speedcalc-seconds" maxlength="2" size="4" placeholder="00"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
     </select>
   </form>
-  <h3>Average Speed</h3>
-  <p id="average-speed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate
-    facere obcaecati,
-    maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
+  <p id="average-speed">gg</p>
+  <h3>Distance</h3>
+  <form>
+    <label for="speed">Speed</label>
+    <input id="distancecalc-speed" maxlength="4" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    <select id="distancecalc-milesOrKM" name="milesOrKM">
+      <option value="Miles">Mph</option>
+      <option value="Kilometers">Kmh</option>
+    </select></br>
+    <label for="hours">Hours:</label>
+    <input id="distancecalc-hours" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <label for="minutes">Minutes:</label>
+    <input id="distancecalc-minutes" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /></br>
+    <label for="seconds">Seconds:</label>
+    <input id="distancecalc-seconds" maxlength="2" size="4" placeholder="00"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </select>
+  </form>
+  <p id="distance"></p>
+  <p id="time"></p>
   <h3>Estimated Event Times</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
     maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
-  <h3>World Record Pace Comparisons</h3>
-  <p id="world-records">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
+  <p id="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
     maxime sunt sed beatae aliquam eos, totam sint mollitia numquam recusandae commodi suscipit! Libero, sequi ab!</p>
   <h3>Training Pace Zones</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos unde possimus cupiditate facere obcaecati,
